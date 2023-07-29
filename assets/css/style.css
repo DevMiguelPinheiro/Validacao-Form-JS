@@ -1,6 +1,5 @@
-
 :root {
-  --primary-color: rgb(17, 86, 102);
+  --primary-color: rgb(240, 233, 233);
   --primary-color-darker: rgb(9, 48, 56);
 }
 
@@ -25,15 +24,13 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
 }
 
 form input, form label, form button {
   display: block;
   width: 100%;
   margin-bottom: 10px;
-}
-
-form input {
   font-size: 24px;
   height: 50px;
   padding: 0 20px;
@@ -44,9 +41,9 @@ form input:focus {
 }
 
 form button {
-  border: none;
-  background: var(--primary-color);
-  color: #fff;
+  border-radius: 30em;
+  background:green;
+  color: black;
   font-size: 18px;
   font-weight: 700;
   height: 50px;
@@ -55,7 +52,8 @@ form button {
 }
 
 form button:hover {
-  background: var(--primary-color-darker);
+  border-radius: 30em;
+  background: rgb(188, 246, 188);
 }
 
 .error-text {
@@ -64,13 +62,13 @@ form button:hover {
 }
 
 .success {
-  background-color: #c9f7c5; /* Cor de fundo verde */
-  border: 1px solid #4caf50; /* Cor da borda verde (opcional) */
-  color: #000; /* Cor do texto (opcional) */
+  background-color: #c9f7c5;
+  border: 1px solid #4caf50;
+  color: #000;
 }
 
-.Invalid{
-  background-color: #fd6868; /* Cor de fundo verde */
-  border: 1px solid red; /* Cor da borda verde (opcional) */
-  color: #000; /* Cor do texto (opcional) */
+.Invalid {
+  background-color: #fd6868;
+  border: 1px solid red;
+  color: #000;
 }

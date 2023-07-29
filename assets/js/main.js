@@ -5,7 +5,7 @@ class ValidaForm{
         this.eventos();
     }
 
-    eventos(){
+    events(){
         this.formulario.addEventListener('submit',e =>{
             this.handleSubmit(e);
 
@@ -41,14 +41,12 @@ class ValidaForm{
             this.addInvalidClass(field);
           }
           }
-          
-
 
           if(field.classList.contains('usuario')) {
             if(!this.validaUsuario(field)){
             valid = false;
           }
-          
+          this.addSuccessClass(field);
           }
         }
     }
@@ -61,8 +59,7 @@ class ValidaForm{
       if(senha.value !== repetirSenha.value) {
         this.createError(senha, 'Campos senha e repetir senha precisar ser iguais.');
         this.createError(repetirSenha, 'Campos senha e repetir senha precisar ser iguais.');
-        valid = false;
-        
+        valid = false;  
       }
   
       if(senha.value.length < 6 || senha.value.length > 12) {  
@@ -76,15 +73,15 @@ class ValidaForm{
 
     validaCPF(field) {
       const cpf = new ValidaCPF(field.value);
-  
       if (!cpf.valida()) {
         this.createError(field, 'CPF inválido.');
         this.addInvalidClass(field);
         return false; 
-      }
-      this.removeInvalidClass(field);
-      this.addSuccessClass(field); // Adiciona a classe "success" ao input de CPF
-      return true; 
+      }else{
+        this.removeInvalidClass(field);
+        this.addSuccessClass(field); 
+        return true;
+      } 
     }
 
     validaUsuario(field){
@@ -101,7 +98,7 @@ class ValidaForm{
         valid = false;
       }
       this.removeInvalidClass(field);
-      this.addSuccessClass(field);
+      
       return valid;
     }
 
