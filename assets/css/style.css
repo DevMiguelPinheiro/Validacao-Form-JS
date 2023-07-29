@@ -57,7 +57,20 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+
 .error-text {
   font-size: 12px;
   color: red;
+}
+
+.success {
+  background-color: #c9f7c5; /* Cor de fundo verde */
+  border: 1px solid #4caf50; /* Cor da borda verde (opcional) */
+  color: #000; /* Cor do texto (opcional) */
+}
+
+.Invalid{
+  background-color: #fd6868; /* Cor de fundo verde */
+  border: 1px solid red; /* Cor da borda verde (opcional) */
+  color: #000; /* Cor do texto (opcional) */
 }
